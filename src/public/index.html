@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Portfolio-Pablo-Alcaraz</title>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="cont-nav">
+            <nav class='navBar' id="navBar">
+                <a href="#home"><strong>Inicio</strong></a>
+                <a href="#sobreMi"><strong>Sobre Mí</strong></a>
+                <a href="#tecnologias"><strong>Tecnologías</strong></a>
+                <a href="#formacion"><strong>Formación</strong></a>
+                <a href="#proyectos"><strong>Proyectos</strong></a>
+                <a href="#contacto"><strong>Contacto</strong></a>
+                <div class="nav-right">
+                    <button type="button" class="burger" id="burger"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <h2 class="switch" id="switch">
+                        <i class="fa fa-circle" id="verde" aria-hidden="true"></i>
+                        <i class="fa fa-circle" id="azul" aria-hidden="true"></i>
+                    </h2>
+                </div>
+            </nav>
+            <nav id="burger-menu" class="menu-burger">
+                <a href="#home"><strong>Home</strong></a>
+                <a href="#sobreMi"><strong>Sobre Mí</strong></a>
+                <a href="#tecnologias"><strong>Tecnologías</strong></a>
+                <a href="#formacion"><strong>Formación</strong></a>
+                <a href="#proyectos"><strong>Proyectos</strong></a>
+                <a href="#contacto"><strong>Contacto</strong></a>
+            </nav>
+        </div>
+        
+    </div>
+    <div class="home" id="home">
+        <div class="cont-home">
+        <div class="datos-home">
+            <h1 class="nombre_typing"></h1>
+            <p class="descripcion_typing"></p>
+            <div class="redes">
+                <a href="https://www.instagram.com/pablodalcaraz/" target='-blank'><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/pablodalcaraz" target='-blank'><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/pablo-alcaraz-822636186/" target='-blank'><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="foto-home">
+           <img src="/images/fotoBrown.png" alt="foto-perfil" id="dark">
+           <img src="/images/fotoGreen.png" alt="foto-perfil" id="light" style="display: none;">
+        </div>
+    </div>
+    </div>
+     
+    <div class="sobreMi" id="sobreMi">
+        <div class="titulo">
+            <h2>Sobre Mí</h2>
+            <p>Me dedico al diseño y desarrollo de páginas web.</p>
+        </div>
+        <div class="card-cont">
+            <div class="card" id="card">
+            <div class="item">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <h3>Perfil</h3>
+            </div>
+            <div class="contenido">
+                <p>
+                    ¡Hola! Soy Pablo, estudiante y desarrollador web full stack.<br> Comencé mi camino de forma autodidacta y continúo mi aprendzaje en la Universidad de La Punta. </p><p class="seguirLeyendo">Anteriormente, he trabajado en roles centrados en la atención al
+                    cliente y la resolución de problemas, lo que ha fortalecido mis
+                    habilidades de comunicación y empatía, fundamentales en cualquier
+                    entorno laboral. Me destaco por ser colaborativo, con habilidades
+                    interpersonales sólidas y una fuerte determinación para alcanzar
+                    metas. Estoy buscando oportunidades que me permitan aplicar mis
+                    habilidades en desarrollo de software y contribuir con soluciones
+                    innovadoras. Abierto a roles de prácticas o pasantías, estoy
+                    emocionado por las oportunidades de crecimiento profesional que el
+                    sector tecnológico ofrece.</p>
+                    <button class="leer" >Leer mas...</button>
+                    <button class="leerMenos" >Leer menos...</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <h3>Ubicación</h3>
+            </div>
+            <div class="contenido">
+                <p>
+                    Vivo en la ciudad de San Luis,
+                    capital de la provincia homónima en Argentina, escenario
+                    en donde transito mi carrera como desarrollador. </p>
+                   <p class="seguirLeyendo" > Situada
+                  en las majestuosas Sierras de San Luis y con un clima templado
+                  mediterráneo, esta región ofrece un entorno inspirador y tranquilo
+                  para mi trabajo. Además, me estoy formando en la Universidad de La
+                  Punta, donde la excelencia académica se combina con un enfoque
+                  práctico en el campo de la tecnología. San Luis no solo es
+                  conocida por sus hermosos paisajes naturales, sino también por su
+                  creciente importancia en la industria tecnológica. En el predio de
+                  la Universidad de La Punta se encuentra el PILP, un polo de
+                  desarrollo tecnológico que alberga alrededor de 20 empresas de la
+                  industria, proporcionando un ecosistema vibrante y colaborativo
+                  para el desarrollo de proyectos innovadores.</p>
+                  <button class="leer" >Leer mas...</button>
+                  <button class="leerMenos" >Leer menos...</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item">
+                <i class="fa fa-flag" aria-hidden="true"></i>
+                <h3>Intereses</h3>
+            </div>
+            <div class="contenido">
+                <p>
+                    Como apasionado del desarrollo web, me impulsa la oportunidad de
+                formar parte de una industria en constante crecimiento, donde la
+                innovación es clave. </p>
+                <p class="seguirLeyendo">En mis proyectos web eh utilizado, Javascript, React, Node, MySql, MongoDB y Git. Además estoy
+                constantemente buscando aprender nuevas tecnologías y metodologías
+                que me permitan estar al tanto de las últimas tendencias y ofrecer
+                soluciones efectivas y escalables. Mi experiencia en proyectos
+                grupales durante mis estudios universitarios ha fortalecido mis
+                habilidades de trabajo en equipo y resolución de problemas,
+                preparándome para enfrentar desafíos en entornos profesionales.</p>
+                <button class="leer" >Leer mas...</button>
+                  <button class="leerMenos" >Leer menos...</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+     <div class="tecnologias" id="tecnologias">
+        <div class="titulo">
+            <h2>Tecnologías</h2>
+        </div>
+        <div class="cont-tecnologias">
+        <div class="cont-tec">
+            <img src="/images/html.png" alt="logo html">
+            <p>Html</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/css.png" alt="logo css">
+            <p>Css</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/js.png" alt="logo js">
+            <p>Javascript</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/java.png" alt="logo Java">
+            <p>Java</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/python.png" alt="logo python">
+            <p>Python</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/react.png" alt="logo react">
+            <p>React.js</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/nodejs.png" alt="logo node">
+            <p>Node.js</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/mariadb.png" alt="logo mariadb">
+            <p>Maria DB</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/mysql.png" alt="logo mysql">
+            <p>My Sql</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/mongodb.png" alt="logo mongodb">
+            <p>Mongo DB</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/git.png" alt="logo git">
+            <p>Git</p>
+        </div>
+        <div class="cont-tec">
+            <img src="/images/postman.png" alt="logo postman">
+            <p>Postman</p>
+        </div>
+    </div>
+     </div>
+
+
+     <div class="formacion" id="formacion">
+        <div class="titulo"><h2>Formación</h2></div>
+        <div class="cont-form">
+            <div class="form">
+                
+                    <h2>ULP (U.de la Punta)</h2>
+                    <p>2023 - en curso</p>
+                    <p>Tecnicatura Universitaria en Desarrollo de Software</p>
+                
+            </div>
+            <div class="form">
+                
+                <h2>Ticmas Academy</h2>
+                <p>2023</p>
+                <p>Manipulación de datos con Python</p>
+            
+        </div>
+        <div class="form">
+                
+            <h2>Ticmas Academy</h2>
+            <p>2022</p>
+            <p>Primeros pasos en el Font End</p>
+        
+    </div>
+    <div class="form">
+                
+        <h2>Argentina Programa</h2>
+        <p>2021</p>
+        <p>Fundamentos de la programación, POO</p>
+    
+</div>
+        </div>
+     </div>
+
+     <div class="proyectos" id="proyectos">
+        <div class="titulo"><h2>Proyectos</h2></div>
+
+        <div class="cont-proyectos">
+
+            <div class='proyecto'>
+                <div class="detalle-proyecto">
+                    <div class="titulo-proyecto">
+                        <p><strong>E-commerce</strong></p>
+                        <button class="cerrar"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+                    <p>Es una tienda de e-commerce ficticia que permite crear usuarios, añadir productos al carrito y simular compras. La interfaz fue desarrollada íntegramente con HTML5, CSS3 y JavaScript, sin frameworks. El servidor conecta la interfaz con la base de datos. La API fue creada con Node.js y Express.js, utilizando Docker para integrar MongoDB, y Postman para las pruebas.</p>
+                    <div class="link-proyecto">
+                        <button><a href="https://tiendavirtual-de-pablo-alcaraz.netlify.app/" target="_blank">UrbanStreetWear</a></button>
+                        <a href="https://github.com/pablodalcaraz/Teinda-Virtual" target='_blank'><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="image-proyect">
+                    <button class="btnProyect"><img src='/images/UrbanStreetWear.jpg' alt="usw img" /></button>
+                </div>
+            </div>
+
+            <div class='proyecto'>
+                <div class="detalle-proyecto">
+                    <div class="titulo-proyecto">
+                        <p><strong>Calcu Web</strong></p>
+                        <button class="cerrar"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+                    <p>Es una tienda de e-commerce ficticia que permite crear usuarios, añadir productos al carrito y simular compras. La interfaz fue desarrollada íntegramente con HTML5, CSS3 y JavaScript, sin frameworks. El servidor conecta la interfaz con la base de datos. La API fue creada con Node.js y Express.js, utilizando Docker para integrar MongoDB, y Postman para las pruebas.</p>
+                    <div class="link-proyecto">
+                        <button><a href="https://caucluladoraweb.netlify.app/" target="_blank">Calcu web</a></button>
+                        <a href="https://github.com/pablodalcaraz/calculadora-web" target='_blank'><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="image-proyect">
+                    <button class="btnProyect"><img src='/images/calcuweb.jpg' alt="calcuweb img" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="contacto" id="contacto">
+            
+            <div class="formulario" id="formulario" >
+                <div class="titulo"><h2>Contacto</h2></div>
+                <form class="for" id="form" >
+                   <label for="name">Nombre</label>
+                   <input type="text" id="nombre">
+                   <div class="error" id="errorNombre"></div>
+                   <label for="email">Email</label>
+                   <input type="email" id="email">
+                   <div class="error" id="errorEmail"></div>
+                   <label for="text">Comenentario</label>
+                   <textarea name="text" rows="5" id="comentario"></textarea>
+                   <div class="error" id="errorComentario"></div>
+                   <button id="enviar">Enviar</button>
+                </form>
+                <div class="lds-spinner" id="spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div class="exito" id="exito"></div>
+            </div>
+        </div>
+       
+
+        <div class="copyrigth" id="copyright">
+            Copyright&copy; 2024 - Página creada por pablodalcaraz - Todos los
+            derechos reservados.
+          </div>
+
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
