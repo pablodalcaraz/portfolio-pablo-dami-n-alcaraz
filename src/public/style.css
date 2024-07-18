@@ -735,6 +735,7 @@ button.leer, button.leerMenos {
   }
   
    @media (max-width: 576px) {
+   
     
     .fa{
         font-size: 30px;
@@ -743,9 +744,6 @@ button.leer, button.leerMenos {
         font-size: 19px;
     }
     
-    .nav-right .switch {
-        margin-left: 290px;
-    }
     
     .cont-nav nav button {
         display: block;
@@ -870,11 +868,9 @@ button.leer, button.leerMenos {
         text-align: center;
     }
     .image-proyect img, .detalle-proyecto{
-        width: 400px;
+        width: 350px;
      }
-     .detalle-proyecto{
-        margin-left: 85px;
-     }
+   
   
 }
 
