@@ -405,7 +405,7 @@ button.leer, button.leerMenos {
     margin-top: 20px;
     margin-left: 20px;
     color: #000;
-    
+    border: 2px solid var(--azul);
 }
 .detalle-proyecto button{
     width: 120px;
@@ -680,8 +680,61 @@ button.leer, button.leerMenos {
   .lds-spinner{
     display: none;
   }
+  @media (max-width: 1200px){
+    .cont-nav .navBar{
+        justify-content: space-around;
+    }
+  	.card{
+        max-width: 300px;
+        justify-content: space-between;
+    }
+    .cont-tecnologias{
+        border: none;
+    }
+    .cont-form{
+        flex-wrap: wrap;
+    }
+    .image-proyect img, .detalle-proyecto{
+       width: 500px;
+    }
+  }
+  @media (max-width: 992px){
+  	.card{
+        margin: 5px;
+        max-width: 270px;
+    }
+    .image-proyect img, .detalle-proyecto{
+        width: 400px;
+     }
+     .detalle-proyecto{
+        font-size: 12px;
+     }
+  }
 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
+   .cont-nav .navBar{
+    justify-content: space-between;
+   }
+   .home h1{
+    font-size: 30px;
+   }
+   .foto-home img{
+    width: 300px;
+    height: 230px;
+   }
+   .datos-home{
+    width: 300px;
+    height: 200px;
+   }
+   .card-cont{
+    justify-content: center;
+     text-align: center;
+     flex-wrap: wrap; 
+   }
+    
+  }
+  
+   @media (max-width: 576px) {
     
     .fa{
         font-size: 30px;
@@ -799,8 +852,6 @@ button.leer, button.leerMenos {
         z-index: 1;
     }
     
-
-    
     .image-proyect img{
         width: 100%;
         height: auto; 
@@ -813,5 +864,18 @@ button.leer, button.leerMenos {
         padding: 5px;
         font-size: 10px;
     }
+    .proyecto{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .image-proyect img, .detalle-proyecto{
+        width: 400px;
+     }
+     .detalle-proyecto{
+        margin-left: 85px;
+     }
   
 }
+
+ 
