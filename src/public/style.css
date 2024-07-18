@@ -396,7 +396,7 @@ button.leer, button.leerMenos {
     transition:  transform 0.3s ease;
     font-size: 14px;
     width: 580px;
-    height: 245px;
+    height: 230px;
     padding: 10px;
     position: absolute;
     background-color: var(--bgl);
@@ -407,8 +407,51 @@ button.leer, button.leerMenos {
     color: #000;
     border: 2px solid var(--azul);
 }
-.detalle-proyecto button{
+.titulo-detalle{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.titulo-detalle button{
+    background: none;
+    border: none;
+}
+.titulo-detalle i{
+    font-size: 30px;
+    color: var(--gris);
+    cursor: pointer;
+}
+.titulo-detalle i:hover{
+    color: var(--azul);
+}
+.ir {
     width: 120px;
+    border-radius: 16px;
+    padding: 7px;
+    background-color: var(--azul);
+    text-align: center;
+    text-decoration: none;
+    color: var(--bgl);
+    box-shadow: 2px 2px 2px 2px rgba(134, 131, 131, 0.2);
+}
+.ir:hover{
+    background-color: var(--gris);
+}
+.gh {
+    font-size: 30px;
+    color: var(--azul);
+    margin-left: 10px;
+    margin-top: 5px; /* optional: add some space between the buttons */
+}
+.gh:hover{
+    color: var(--gris);
+}
+
+.link-proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* optional: add some space between the buttons */
 }
 
 .detalle-proyecto.visible {
@@ -427,10 +470,7 @@ button.leer, button.leerMenos {
     cursor: pointer;
 }
 
-.titulo-proyecto i {
-    font-size: 30px;
-    color: #000;
-}
+
 
 .titulo-proyecto h2 {
     color: #000;
@@ -451,46 +491,7 @@ button.leer, button.leerMenos {
     justify-content: space-between;
 }
 
-.link-proyecto {
-    display: flex;
-    justify-content: center;
-}
 
-.link-proyecto i {
-    border-radius: 50%;
-    color: var(--azul);
-    width: 25px;
-    height: 25px;
-    font-size: 30px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.link-proyecto button {
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-    background-color: var(--azul);
-    cursor: pointer;
-}
-
-.link-proyecto a {
-    text-decoration: none;
-    color: var(--bgl);
-}
-
-.link-proyecto a:hover {
-    color: var(--bgl);
-}
-
-.link-proyecto i:hover {
-    color: var(--gris);
-}
-
-.link-proyecto button:hover {
-    background-color: var(--gris);
-    color: var(--bgl);
-}
 
 .image-proyect img {
     width: 600px;
@@ -680,13 +681,10 @@ button.leer, button.leerMenos {
   .lds-spinner{
     display: none;
   }
-  @media (max-width: 1200px){
-    .cont-nav .navBar{
-        justify-content: space-around;
-    }
+  @media (min-width: 993px) and (max-width: 1200px){
+
   	.card{
-        max-width: 300px;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .cont-tecnologias{
         border: none;
@@ -698,20 +696,23 @@ button.leer, button.leerMenos {
        width: 500px;
     }
   }
-  @media (max-width: 992px){
+  @media (max-width: 992px) and (min-width: 769px){
   	.card{
         margin: 5px;
         max-width: 270px;
     }
-    .image-proyect img, .detalle-proyecto{
-        width: 400px;
+    .image-proyect img{
+        width: 500px;
+     }
+     .detalle-proyecto{
+        width: 480px;
      }
      .detalle-proyecto{
         font-size: 12px;
      }
   }
 
-  @media (max-width: 768px) {
+  @media (min-whidth: 577px) and (max-width: 768px) {
    .cont-nav .navBar{
     justify-content: space-between;
    }
@@ -736,7 +737,9 @@ button.leer, button.leerMenos {
   
    @media (max-width: 576px) {
    
-    
+    .cont-nav .switch{
+        margin-left: 280px;
+    }
     .fa{
         font-size: 30px;
     }
@@ -867,9 +870,7 @@ button.leer, button.leerMenos {
         justify-content: center;
         text-align: center;
     }
-    .image-proyect img, .detalle-proyecto{
-        width: 350px;
-     }
+   
    
   
 }
