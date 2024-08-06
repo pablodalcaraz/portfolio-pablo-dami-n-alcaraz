@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
       navBar.classList.add("fixed");
-      burgerMenu.style.paddingTop= '70px'
+      burgerMenu.style.paddingTop= '90px'
       navBar.style.top = "0";
       navBar.style.left = "0";
       navBar.style.width = "100%";
