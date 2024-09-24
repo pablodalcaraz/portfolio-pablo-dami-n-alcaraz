@@ -1,5 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script cargado correctamente");
+const body= document.body
+history.scrollRestoration = 'manual';
+window.scrollTo(0,0);
+
+//modo dark/ligth
+const switchElement = document.getElementById("switch");
+  const dark = document.getElementById('dark');
+  const light = document.getElementById('light');
+  const modoGuardado= localStorage.getItem('theme' || 'ligth')
+
+  if (modoGuardado === 'azul-theme') {
+    document.body.classList.add('azul-theme');
+    dark.style.display = 'none';
+    light.style.display = 'block';
+} else {
+    document.body.classList.remove('azul-theme');
+    dark.style.display = 'block';
+    light.style.display = 'none';
+}
+  
+  switchElement.addEventListener("click", () => {
+    document.body.classList.toggle("azul-theme");
+    
+    if (document.body.classList.contains("azul-theme")) {
+      dark.style.display = 'none';
+      light.style.display = 'block';
+      localStorage.setItem('theme', 'azul-theme');
+    } else {
+      dark.style.display = 'block';
+      light.style.display = 'none';
+      localStorage.setItem('theme', 'light-theme');
+    }
+  });
 
 
   const miNombre = document.querySelector('.nombre_typing');
@@ -49,21 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
  
-  const switchElement = document.getElementById("switch");
-  const dark = document.getElementById('dark');
-  const light = document.getElementById('light');
   
-  switchElement.addEventListener("click", () => {
-    document.body.classList.toggle("azul-theme");
-    
-    if (document.body.classList.contains("azul-theme")) {
-      dark.style.display = 'none';
-      light.style.display = 'block';
-    } else {
-      dark.style.display = 'block';
-      light.style.display = 'none';
-    }
-  });
   const navBar = document.getElementById("navBar");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
@@ -246,4 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ev.preventDefault();
     validar();
   });
+  if (body) {
+    body.style.visibility = 'visible'
+  }
 });

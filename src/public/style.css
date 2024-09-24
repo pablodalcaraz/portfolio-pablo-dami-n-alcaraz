@@ -1,5 +1,5 @@
 :root {
-
+    --color1: #000;
     --bgd: #8c8c8c;
     --bgl: #f1eff0;
     --blanco: #fff;
@@ -10,6 +10,7 @@
 }
 
 .azul-theme {
+    --color1: #fff;
     --bgd: #000000;
     --bgl: #f1eff0;
     --blanco: #fff;
@@ -18,7 +19,9 @@
     --sombra: 0 2px 4px #fff;
     --gris: #8c8c8c;
 }
-
+body{
+    visibility: hidden;
+}
 html,
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -31,6 +34,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 
 .contenedor-principal,
 .cont-nav,
@@ -117,8 +121,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 #azul {
