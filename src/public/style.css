@@ -641,10 +641,14 @@ textarea {
     padding: 15px;
     color: var(--aMarino);
     cursor: pointer;
+    box-shadow: var(--sombra);
+    transform: transition 0.3s ease;
 }
 
 .for button:hover {
     background-color: var(--gris);
+    transform: scale(1.1);
+
 }
 
 .for input,
@@ -675,12 +679,15 @@ textarea {
     color: var(--blanco);
     padding: 10px;
     width: 100px;
+    box-shadow: var(--sombra);
     cursor: pointer;
+    transform: trasition 0.3s ease;
 }
 
 .volver:hover {
     background-color: var(--blanco);
     color: var(--azul);
+    transform: scale(1.1);
 }
 
 .lds-spinner {
