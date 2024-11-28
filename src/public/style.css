@@ -224,7 +224,17 @@ nav {
     text-align: center;
     
 }
+.desc_sobre_mi{
+    margin-left: 55px;
+    margin-right: 55px;
+    font-size: 16px;
+}
 
+.titulo_contacto{
+    display: block;
+    text-align: center;
+    color: var(--gris);
+}
 .card-cont {
     display: flex;
     align-items: center;
