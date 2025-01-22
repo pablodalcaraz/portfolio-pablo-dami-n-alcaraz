@@ -3,32 +3,42 @@ const body= document.body
 history.scrollRestoration = 'manual';
 window.scrollTo(0,0);
 
+
+
 //modo dark/ligth
 const switchElement = document.getElementById("switch");
   const dark = document.getElementById('dark');
   const light = document.getElementById('light');
+  const fotoLight = document.getElementById('foto-light')
+  const fotoDark = document.getElementById('foto-dark')
   const modoGuardado= localStorage.getItem('theme' || 'ligth')
 
-  if (modoGuardado === 'azul-theme') {
-    document.body.classList.add('azul-theme');
+  if (modoGuardado === 'dark-theme') {
+    document.body.classList.add('dark-theme');
     dark.style.display = 'none';
     light.style.display = 'block';
+    fotoDark.style.display = 'block'
+    fotoLight.style.display = 'none'
 } else {
-    document.body.classList.remove('azul-theme');
+    document.body.classList.remove('dark-theme');
     dark.style.display = 'block';
     light.style.display = 'none';
 }
   
   switchElement.addEventListener("click", () => {
-    document.body.classList.toggle("azul-theme");
+    document.body.classList.toggle("dark-theme");
     
-    if (document.body.classList.contains("azul-theme")) {
+    if (document.body.classList.contains("dark-theme")) {
       dark.style.display = 'none';
       light.style.display = 'block';
-      localStorage.setItem('theme', 'azul-theme');
+      fotoLight.style.display = 'none'
+      fotoDark.style.display = 'block'
+      localStorage.setItem('theme', 'dark-theme');
     } else {
       dark.style.display = 'block';
       light.style.display = 'none';
+      fotoLight.style.display = 'block'
+      fotoDark.style.display = 'none'
       localStorage.setItem('theme', 'light-theme');
     }
   });
@@ -81,37 +91,38 @@ const switchElement = document.getElementById("switch");
 });
 
  
-  
-  const navBar = document.getElementById("navBar");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 20) {
-      navBar.classList.add("fixed");
-      burgerMenu.style.paddingTop= '90px'
-      navBar.style.top = "0";
-      navBar.style.left = "0";
-      navBar.style.width = "100%";
-    } else {
-      burgerMenu.style.paddingTop= '0'
-      navBar.classList.remove("fixed");
-    }
-  });
+const foto = document.querySelector('.foto-home');
+const datos = document.querySelector('.datos-home');
+const sobreMi = document.querySelector('.sobreMi');
 
-  const burger = document.getElementById('burger');
-  const burgerMenu= document.getElementById('burger-menu');
-  const items = burgerMenu.querySelectorAll('a');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 250) {
+    foto.style.visibility = 'hidden';
+    datos.style.marginRight = '400px';
+    datos.style.opacity = '50%';
+    datos.style.transition = 'margin-right 0.3s ease';
+  } else {
+    foto.style.visibility = 'visible';
+    datos.style.marginRight = '0';
+    datos.style.opacity = '1'
+    datos.style.transition = 'margin-right 0.3s ease';
+  }
+});
 
-  burger.addEventListener('click', function() {
-      burgerMenu.classList.toggle('active');
-  })
+// Agrandar contenedor sobreMi
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 250) {
+    sobreMi.style.left = '0';
+    sobreMi.style.width = '100%';
+    datos.style.visibility = 'hidden';
+  } else {
+    sobreMi.style.left = '40%';
+    sobreMi.style.width = '60%';
+    datos.style.visibility = 'visible';
+  }
+});
 
- items.forEach(item => {
-  item.addEventListener('click', function() {
-    burgerMenu.classList.remove('active');
-  })
- })
 
- 
-  
   
  document.querySelectorAll('.contenido').forEach(section => {
   const leer = section.querySelector('.leer');
@@ -141,6 +152,8 @@ const switchElement = document.getElementById("switch");
       selector.classList.toggle("active");
     });
   }
+  
+  
 
   const form = document.getElementById("form");
   let nombre = document.getElementById("nombre");
@@ -156,11 +169,14 @@ const switchElement = document.getElementById("switch");
   function limpiarCampos(ev) {
     let campo = ev.target;
     if (campo === nombre) {
-      errorNombre.innerText = "";
+      errorNombre.innerText = "\u00A0";
+      errorNombre.style.visibility = 'hidden';
     } else if (campo === email) {
-      errorEmail.innerText = "";
+      errorEmail.innerText = "\u00A0";
+      errorEmail.style.visibility = 'hidden';
     } else if (campo === comentario) {
-      errorComentario.innerText = "";
+      errorComentario.innerText = "\u00A0";
+      errorComentario.style.visibility = 'hidden';
     }
     campo.value = "";
     campo.style.backgroundColor = "";
@@ -182,32 +198,38 @@ const switchElement = document.getElementById("switch");
 
     if (nombre.value.trim() === "") {
       errores.push("Campo obligatorio");
-      errorNombre.innerText = "Campo obligatorio";
-      nombre.style.backgroundColor = "#f7bfd8";
+      errorNombre.innerText = "*Campo obligatorio";
+      errorNombre.style.visibility = 'visible';
+      nombre.style.backgroundColor = "#8c8c8c";
     } else if (!er_nombre.test(nombre.value)) {
       errores.push("Nombre inválido");
-      errorNombre.innerText = "Nombre inválido";
-      nombre.style.backgroundColor = "#f7bfd8";
+      errorNombre.innerText = "*Nombre no válido";
+      errorNombre.style.visibility = 'visible';
+      nombre.style.backgroundColor = "#8c8c8c";
     }
 
     if (email.value.trim() === "") {
       errores.push("Campo obligatorio");
-      errorEmail.innerText = "Campo obligatorio";
-      email.style.backgroundColor = "#f7bfd8";
+      errorEmail.innerText = "*Campo obligatorio";
+      errorEmail.style.visibility = 'visible';
+      email.style.backgroundColor = "#8c8c8c";
     } else if (!er_email.test(email.value)) {
       errores.push("Email inválido");
-      errorEmail.innerText = "Email inválido";
-      email.style.backgroundColor = "#f7bfd8";
+      errorEmail.innerText = "*Email no válido";
+      errorEmail.style.visibility = 'visible';
+      email.style.backgroundColor = "#8c8c8c";
     }
 
     if (comentario.value.trim() === "") {
       errores.push("Campo obligatorio");
-      errorComentario.innerText = "Campo obligatorio";
-      comentario.style.backgroundColor = "#f7bfd8";
+      errorComentario.innerText = "*Campo obligatorio";
+      errorComentario.style.visibility = 'visible';
+      comentario.style.backgroundColor = "#8c8c8c";
     } else if (comentario.value.trim().length > 300) {
       errores.push("Máximo 300 caracteres");
-      errorComentario.innerText = "Máximo 300 caracteres";
-      comentario.style.backgroundColor = "#f7bfd8";
+      errorComentario.innerText = "*Máximo 300 caracteres";
+      errorComentario.style.visibility = 'visible';
+      comentario.style.backgroundColor = "#8c8c8c";
     }
 
     if (errores.length === 0) {
