@@ -178,7 +178,15 @@ window.addEventListener('scroll', () => {
     });
   }
   
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbarCollapse = document.getElementById('navbarNav');
+
   
+  navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navbarCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+      });
+  });
 
   const form = document.getElementById("form");
   let nombre = document.getElementById("nombre");
