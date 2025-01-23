@@ -70,6 +70,31 @@ const switchElement = document.getElementById("switch");
   
   escribirNombreYDescripcion();
   
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }else{
+          entry.target.classList.remove('active');
+        }
+    });
+});
+
+document.querySelectorAll('.cont-tec').forEach(item => {
+    observer.observe(item);
+});
+
+document.querySelectorAll('.cont-form').forEach(item => {
+  observer.observe(item);
+});
+
+document.querySelectorAll('.cont-proyectos').forEach(item => {
+  observer.observe(item);
+});
+
+
+
+
 
   document.querySelectorAll('.proyecto').forEach(selector => {
     const proyecto = selector.querySelector('.btnProyect');

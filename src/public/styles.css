@@ -120,7 +120,7 @@ html,body{
     
 }
 .allContent{
-    padding-top: 600px;
+    padding-top: 800px;
 }
 .sobreMi{
     text-align: center;
@@ -194,6 +194,13 @@ html,body{
     box-shadow: var(--sombra);
     border-radius: 5px;
     background-color: var(--primario);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .cont-tec.active{
+    opacity: 1;
+    transform: scale(1);
   }
 
   .cont-tec img {
@@ -212,31 +219,7 @@ html,body{
   }
 
 
-  /*@keyframes show{
-    0%{
-        opacity: 0;
-        transform: scale(0.5);
-        transform: trasition 0.3s ease;
-        
-   
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-  }
-
-  .cont-tec{
-    view-timeline-name:--icono ;
-    view-timeline-axis: block;
-
-    animation-timeline: --icono;
-    animation-name: show;
-
-    animation-range:entry 35% cover 40%;
-    animation-fill-mode: both;
-
-  }*/
+ 
 
   .cont-form{
     display: flex;
@@ -245,6 +228,13 @@ html,body{
     padding: 20px;
     gap: 10px;
     justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .cont-form.active{
+    opacity: 1;
+    transform: scale(1);
   }
   .formacion-titulo{
     color: var(--primario);
@@ -260,31 +250,7 @@ html,body{
   }
   .cont-form p{
     color: var(--color1);
-  }
-
-/*@keyframes mostrarFormacion {
-    0%{
-        opacity: 0;
-        transform: scale(0.5);
-        transform: trasition 0.3s ease;
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.cont-form, .form{
-    view-timeline-name:--icono ;
-    view-timeline-axis: block;
-
-    animation-timeline: --icono;
-    animation-name: mostrarFormacion;
-
-    animation-range:entry 25% cover 30%;
-    animation-fill-mode: both;
-  } */
-  
+  }  
 
 .proyectos-titulo{
     color: var(--primario);
@@ -295,7 +261,14 @@ html,body{
     align-items: center;
     justify-content: center;
     gap: 20px;
-}
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+  }
+  .cont-proyectos.active{
+    opacity: 1;
+    transform: translate(0);
+  }
 
 .proyecto {
     perspective: 1000px;
@@ -439,49 +412,6 @@ html,body{
     transform: transition 0.3s ease;
 }
 
-/*@keyframes aparecerDerecha {
-    0%{
-        opacity: 0;
-        margin-right: -1000px;
-        transform: transition 0.3s forwards;
-    }
-    100%{
-        opacity: 1;
-        margin-right: 0;
-    }
-}
-#proyecto1,#proyecto3,#proyecto5{
-    view-timeline-name:--proyecto ;
-    view-timeline-axis: block;
-
-    animation-timeline: --proyecto;
-    animation-name: aparecerDerecha;
-
-    animation-range:entry 35% cover 40%;
-    animation-fill-mode: both;
-  }*/
-  
-  /*@keyframes aparecerIzquierda {
-    0%{
-        opacity: 0;
-        margin-left: -1000px;
-        transform: transition 0.3s forwards;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 0;
-    }
-}
-#proyecto2,#proyecto4{
-    view-timeline-name:--proyecto ;
-    view-timeline-axis: block;
-
-    animation-timeline: --proyecto;
-    animation-name: aparecerIzquierda;
-
-    animation-range:entry 35% cover 40%;
-    animation-fill-mode: both;
-  }*/
 
   .copyrigth {
     color: var(--primario);
@@ -893,23 +823,7 @@ textarea {
         flex-direction: column;
     }
 
-    .menu-burger.active {
-        display: flex;
-        background-color: var(--bgl);
-        opacity: 90%;
-        left: 0;
-        position: fixed;
-        width: 100%;
-    }
-
-    .menu-burger.active a:hover {
-        color: var(--bgd);
-    }
-
-    .menu-burger a {
-        margin-left: 10px;
-        z-index: 1;
-    }
+    
 
     .image-proyect img {
         width: 100%;
