@@ -212,7 +212,7 @@ html,body{
   }
 
 
-  @keyframes show{
+  /*@keyframes show{
     0%{
         opacity: 0;
         transform: scale(0.5);
@@ -236,7 +236,7 @@ html,body{
     animation-range:entry 35% cover 40%;
     animation-fill-mode: both;
 
-  }
+  }*/
 
   .cont-form{
     display: flex;
@@ -262,7 +262,7 @@ html,body{
     color: var(--color1);
   }
 
-@keyframes mostrarFormacion {
+/*@keyframes mostrarFormacion {
     0%{
         opacity: 0;
         transform: scale(0.5);
@@ -283,7 +283,7 @@ html,body{
 
     animation-range:entry 25% cover 30%;
     animation-fill-mode: both;
-  } 
+  } */
   
 
 .proyectos-titulo{
@@ -439,7 +439,7 @@ html,body{
     transform: transition 0.3s ease;
 }
 
-@keyframes aparecerDerecha {
+/*@keyframes aparecerDerecha {
     0%{
         opacity: 0;
         margin-right: -1000px;
@@ -459,9 +459,9 @@ html,body{
 
     animation-range:entry 35% cover 40%;
     animation-fill-mode: both;
-  }
+  }*/
   
-  @keyframes aparecerIzquierda {
+  /*@keyframes aparecerIzquierda {
     0%{
         opacity: 0;
         margin-left: -1000px;
@@ -481,7 +481,7 @@ html,body{
 
     animation-range:entry 35% cover 40%;
     animation-fill-mode: both;
-  }
+  }*/
 
   .copyrigth {
     color: var(--primario);
@@ -740,16 +740,7 @@ textarea {
 
 
 @media (max-width: 768px) {
-    .navbar .theme-icon{
-        display: block;
-        position: relative;
-        right: 10px;
-        
-    }
-    .navbar .collapse{
-        position: relative;
-        
-    }
+  
     
     .navbar-toggler{
         border: none;
@@ -763,8 +754,10 @@ textarea {
     .navbar-toggler-icon i{
         color: var(--primario);
     }
-    .nav-item .switch{
-        display: none;
+    .navbar .switch{
+        position: absolute;
+        margin-top: -45px;
+        right: 10px;
     }
     .fa {
         font-size: 30px;
@@ -802,6 +795,11 @@ textarea {
         border: none;
         margin: 0;
         padding: 0;
+    }
+    .sobreMi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .card-cont {

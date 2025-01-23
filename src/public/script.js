@@ -7,36 +7,41 @@ window.scrollTo(0,0);
 
 //modo dark/ligth
 const switchElement = document.getElementById("switch");
-const switchElement2 = document.getElementById("theme-icon");
-const darkCollapse = document.getElementById('dark-collapse');
-const dark = document.getElementById('dark');
-const lightCollapse = document.getElementById('light-collapse');
-const light = document.getElementById('light');
-const fotoLight = document.getElementById('foto-light');
-const fotoDark = document.getElementById('foto-dark');
-const modoGuardado = localStorage.getItem('theme') || 'light';
+  const dark = document.getElementById('dark');
+  const light = document.getElementById('light');
+  const fotoLight = document.getElementById('foto-light')
+  const fotoDark = document.getElementById('foto-dark')
+  const modoGuardado= localStorage.getItem('theme' || 'ligth')
 
-const applyTheme = (theme) => {
-  document.body.classList.toggle('dark-theme', theme === 'dark-theme');
-  dark.style.display = theme === 'dark-theme' ? 'none' : 'block';
-  light.style.display = theme === 'dark-theme' ? 'block' : 'none';
-  fotoDark.style.display = theme === 'dark-theme' ? 'block' : 'none';
-  fotoLight.style.display = theme === 'dark-theme' ? 'none' : 'block';
-  darkCollapse.style.display = theme === 'dark-theme' ? 'none' : 'block';
-  lightCollapse.style.display = theme === 'dark-theme' ? 'block' : 'none';
-};
-
-applyTheme(modoGuardado);
-
-const toggleTheme = () => {
-  const theme = document.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
-  applyTheme(theme);
-  localStorage.setItem('theme', theme);
-};
-
-switchElement.addEventListener("click", toggleTheme);
-switchElement2.addEventListener("click", toggleTheme);
-
+  if (modoGuardado === 'dark-theme') {
+    document.body.classList.add('dark-theme');
+    dark.style.display = 'none';
+    light.style.display = 'block';
+    fotoDark.style.display = 'block'
+    fotoLight.style.display = 'none'
+} else {
+    document.body.classList.remove('dark-theme');
+    dark.style.display = 'block';
+    light.style.display = 'none';
+}
+  
+  switchElement.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    
+    if (document.body.classList.contains("dark-theme")) {
+      dark.style.display = 'none';
+      light.style.display = 'block';
+      fotoLight.style.display = 'none'
+      fotoDark.style.display = 'block'
+      localStorage.setItem('theme', 'dark-theme');
+    } else {
+      dark.style.display = 'block';
+      light.style.display = 'none';
+      fotoLight.style.display = 'block'
+      fotoDark.style.display = 'none'
+      localStorage.setItem('theme', 'light-theme');
+    }
+  });
 
 
   const miNombre = document.querySelector('.nombre_typing');
