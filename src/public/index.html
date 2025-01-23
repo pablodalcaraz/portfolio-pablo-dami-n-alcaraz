@@ -18,9 +18,13 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
               </button>
+              <div class="theme-icon" id="theme-icon" >
+                <i class="fa fa-moon-o" id="dark-collapse" aria-hidden="true"></i>
+                <i class="fa fa-sun-o" id="light-collapse" aria-hidden="true"></i>
+              </div>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav w-100 d-flex justify-content-between">
                   <li class="nav-item">
@@ -374,13 +378,16 @@
     </div>
 
         <div class="copyrigth" id="copyright">
-            Copyright&copy; 2024 - Página creada por pablodalcaraz - Todos los
+            Copyright&copy; <span id="year">2024</span> - Página creada por pablodalcaraz - Todos los
             derechos reservados.
           </div>
 
     </div>
 
     </div>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
     <script src="script.js"></script>
     
     <script src="gsap.js"></script>

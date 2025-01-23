@@ -36,6 +36,9 @@ html,body{
     width: 100%;
     z-index: 1;
 }
+.theme-icon{
+    display: none; 
+}
 .navbar-nav strong{
     color: var(--primario) !important;
     transform: trasition 0.3s ease;
@@ -704,6 +707,17 @@ textarea {
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
+    .navbar-toggler{
+        border: none !important;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+
+   
+    .navbar-toggler i{
+        color: blue !important;
+    }
 
     .card {
         flex-wrap: wrap;
@@ -723,58 +737,35 @@ textarea {
     }
 }
 
-@media (max-width: 992px) and (min-width: 769px) {
-    .card {
-        margin: 5px;
-        max-width: 270px;
+
+
+@media (max-width: 768px) {
+    .navbar .theme-icon{
+        display: block;
+        position: relative;
+        right: 10px;
+        
     }
-
-    .image-proyect img {
-        width: 500px;
+    .navbar .collapse{
+        position: relative;
+        
     }
-
-    .detalle-proyecto {
-        width: 480px;
+    
+    .navbar-toggler{
+        border: none;
+        box-shadow: none !important;
     }
-
-    .detalle-proyecto {
-        font-size: 12px;
+    .navbar-toggler-icon{
+        margin-left: 6px;
+        background-image: none;
+        
     }
-}
-
-@media (min-whidth: 577px) and (max-width: 768px) {
-    .cont-nav .navBar {
-        justify-content: space-between;
+    .navbar-toggler-icon i{
+        color: var(--primario);
     }
-
-    .home h1 {
-        font-size: 30px;
+    .nav-item .switch{
+        display: none;
     }
-
-    .foto-home img {
-        width: 300px;
-        height: 230px;
-    }
-
-    .datos-home {
-        width: 300px;
-        height: 200px;
-    }
-
-    .card-cont {
-        justify-content: center;
-        text-align: center;
-        flex-wrap: wrap;
-    }
-
-}
-
-@media (max-width: 576px) {
-
-    .cont-nav .switch {
-        margin-left: 280px;
-    }
-
     .fa {
         font-size: 30px;
     }
@@ -796,7 +787,6 @@ textarea {
         flex-direction: column;
         text-align: center;
         align-items: center;
-
         h1 {
             font-size: 35px;
         }
@@ -805,6 +795,7 @@ textarea {
     .cont-home img {
         width: 300px;
         height: 250px;
+        padding-top: 20px;
     }
 
     .datos-home {
@@ -829,30 +820,34 @@ textarea {
 
     }
 
-    .cont-form {
-        display: flex;
-        flex-wrap: wrap;
+    .formacion {
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
     }
 
     .form {
         height: 290px;
         width: 155px;
         padding: 2px;
-
+        width: 100%;
+        margin-bottom: 10px;
     }
-
-    .tecnologias {
+    .form img{
+        width: 200px;
+        height: auto;
+    }
+   
+    .cont-tecnologias {
         justify-content: center;
         align-items: center;
         display: flex;
-        flex-direction: column;
-    }
-
-    .cont-tecnologias {
+        flex-wrap: wrap;
         width: 100%;
         margin: 0;
         padding: 0;
-        width: 370px;
         border: none;
         box-shadow: none;
     }
@@ -862,10 +857,15 @@ textarea {
         margin: 5px;
         padding: 10px;
         height: 90px;
-
+        min-width: 130px;
         p {
             padding: 0;
         }
+    }
+    .cont-tec img{
+        width: 50px;
+        height: auto;
+        
     }
 
     .cont-proyectos {
@@ -930,8 +930,11 @@ textarea {
         align-items: center;
         justify-content: center;
         text-align: center;
+        padding: 0;
     }
-
+    .contacto, .formulario{
+        width: 100%;
+    }
 
 
 }
