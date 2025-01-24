@@ -5,6 +5,12 @@ window.scrollTo(0,0);
 
 
 
+setTimeout(() => {
+  const nav = document.querySelector('.navbar')
+  nav.classList.add('visible')
+},4000)
+
+
 //modo dark/ligth
 const switchElement = document.getElementById("switch");
   const dark = document.getElementById('dark');

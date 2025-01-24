@@ -35,6 +35,14 @@ html,body{
     position: fixed;
     width: 100%;
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
+}
+.navbar.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
 }
 .theme-icon{
     display: none; 
