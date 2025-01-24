@@ -39,6 +39,7 @@ html,body{
     visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 0s linear 1s;
 }
+
 .navbar.visible {
     opacity: 1;
     visibility: visible;
@@ -644,17 +645,34 @@ textarea {
     animation-fill-mode: both;
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-    .navbar-toggler{
-        border: none !important;
-    }
+.nav-item button{
+    background:none;
+    border: none;
+}
+
+@media (max-width: 1200px) {
+    
     .navbar-toggler:focus{
         box-shadow: none;
     }
 
    
-    .navbar-toggler i{
-        color: blue !important;
+    .navbar-toggler{
+        border: none;
+        box-shadow: none !important;
+    }
+    .navbar-toggler-icon{
+        margin-left: 6px;
+        background-image: none;
+        
+    }
+    .navbar-toggler-icon i{
+        color: var(--primario);
+    }
+    .navbar .switch{
+        position: absolute;
+        margin-top: -45px;
+        right: 10px;
     }
 
     .card {
@@ -680,23 +698,7 @@ textarea {
 @media (max-width: 768px) {
   
     
-    .navbar-toggler{
-        border: none;
-        box-shadow: none !important;
-    }
-    .navbar-toggler-icon{
-        margin-left: 6px;
-        background-image: none;
-        
-    }
-    .navbar-toggler-icon i{
-        color: var(--primario);
-    }
-    .navbar .switch{
-        position: absolute;
-        margin-top: -45px;
-        right: 10px;
-    }
+   
     .fa {
         font-size: 30px;
     }
@@ -716,7 +718,6 @@ textarea {
 
     .cont-home {
         flex-direction: column;
-        text-align: center;
         align-items: center;
         h1 {
             font-size: 35px;

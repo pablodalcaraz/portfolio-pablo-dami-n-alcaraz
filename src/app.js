@@ -15,6 +15,8 @@ const port= process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use('/api', contactRoute);
 app.use(express.static(_dirname + "/public"));
+app.use(express.static(_dirname + "/assets"));
+
 
 app.listen(port, ()=> {
     console.log(`Servidor corriendo en puerto ${port}`);

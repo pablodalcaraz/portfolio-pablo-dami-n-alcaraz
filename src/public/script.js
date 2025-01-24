@@ -8,7 +8,7 @@ window.scrollTo(0,0);
 setTimeout(() => {
   const nav = document.querySelector('.navbar')
   nav.classList.add('visible')
-},4000)
+},3000)
 
 
 //modo dark/ligth
@@ -97,6 +97,8 @@ document.querySelectorAll('.cont-form').forEach(item => {
 document.querySelectorAll('.cont-proyectos').forEach(item => {
   observer.observe(item);
 });
+
+
 
 
 
