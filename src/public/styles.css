@@ -68,18 +68,22 @@ html,body{
     gap: 10px;
 }
 #dark{
-    color: #000000;
+    color: var(--primario);
     cursor: pointer;
 }
 #dark:hover{
+    color: var(--blanco);
+    transform: scale(1.2);
     text-shadow: var(--sombra);
 }
 #light{
-    color: #57bd9e;
+    color: var(--primario);
     display: none;
     cursor: pointer;
 }
 #light:hover{
+    color: var(--blanco);
+    transform: scale(1.2);
     text-shadow: var(--sombra);
 }
 .cont-home{
