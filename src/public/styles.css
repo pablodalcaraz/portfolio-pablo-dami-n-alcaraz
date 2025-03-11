@@ -1,23 +1,23 @@
 :root {
     --color1: #000;
     --bgd: #8c8c8c;
-    --bgl: #f1eff0;
+    --bgl: #000000;
     --blanco: #fff;
     --primario: #000000;
     --secundario: #f1eff0;
     --sombra: 0 2px 4px #000;
-    --gris: #000000;
+    --gris: #8c8c8c;
 }
 
 .dark-theme {
     --color1: #fff;
     --bgd: #000000;
-    --bgl: #f1eff0;
+    --bgl: #57bd9e;
     --blanco: #fff;
-    --primario: #57bd9e;
-    --secundario: #061609;
+    --primario: #000000;
+    --secundario: #57bd9e;
     --sombra: 0 2px 4px #fff;
-    --gris: #8c8c8c;
+    --gris: #fff;
 } 
 
 html,body{
@@ -28,6 +28,9 @@ html,body{
     padding: 0;
     margin: 0;
     
+}
+.fa{
+    color: var(--color1) !important;
 }
 .navbar{
     background-color: var(--bgd) !important;
@@ -49,7 +52,7 @@ html,body{
     display: none; 
 }
 .navbar-nav strong{
-    color: var(--primario) !important;
+    color: var(--bgl) !important;
     transform: trasition 0.3s ease;
 }
 .navbar-nav strong:hover{
@@ -65,10 +68,10 @@ html,body{
 .switch{
     display: flex;
     padding-top: 13px;
-    gap: 10px;
+   
 }
 #dark{
-    color: var(--primario);
+    color: var(--bgl);
     cursor: pointer;
 }
 #dark:hover{
@@ -77,7 +80,7 @@ html,body{
     text-shadow: var(--sombra);
 }
 #light{
-    color: var(--primario);
+    color: var(--bgl);
     display: none;
     cursor: pointer;
 }
@@ -86,16 +89,17 @@ html,body{
     transform: scale(1.2);
     text-shadow: var(--sombra);
 }
+
 .cont-home{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
     text-align: center;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);    
+    transform: translate(-50%,-50%); 
+   
 }
 .datos-home{
     width: 500px;
@@ -108,7 +112,10 @@ html,body{
 .datos-home p{
     color: var(--color1);
 }
-
+.redes{
+    display: none;
+    animation: aparecer 0.3s ease-in-out;
+}
 .redes a{
     color: var(--primario);
     font-size: 25px;
@@ -123,14 +130,27 @@ html,body{
 }
 .redes i:hover{
     background-color: var(--primario);
-    color: var(--bgd);
+    color: var(--blanco);
     transform: scale(1.1);
 }
 .foto-home img{
-    width: 500px;
-    height: 360px;
+    width: auto;
+    height: 350px;;
     transition: visibility 0.2s ease; 
     
+}
+.foto-home{
+    display: none;
+    animation: aparecer 0.3s ease-in-out;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .allContent{
     padding-top: 800px;
@@ -222,7 +242,7 @@ html,body{
     padding: 10px;
   }
   .cont-tec p{
-    color: var(--bgl);
+    color: var(--blanco);
   }
 
   .icono-nombre {
@@ -438,7 +458,9 @@ html,body{
     align-items: center;
     justify-content: center;
 }
-
+.ir{
+    color: var(--blanco);
+}
 .formulario {
     border-radius: 16px;
     box-shadow: var(--sombra);
@@ -729,8 +751,8 @@ textarea {
     }
 
     .cont-home img {
-        width: 300px;
-        height: 250px;
+        width: auto;
+        height: 300px;
         padding-top: 20px;
     }
 
@@ -822,7 +844,6 @@ textarea {
     textarea {
         width: 340px;
     }
-
     .nav-right .switch {
         right: 20px;
     }

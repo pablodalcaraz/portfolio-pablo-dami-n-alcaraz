@@ -3,12 +3,33 @@ const body= document.body
 history.scrollRestoration = 'manual';
 window.scrollTo(0,0);
 
-
-
+const foto = document.querySelector('.foto-home');
+const datos = document.querySelector('.datos-home');
+const sobreMi = document.querySelector('.sobreMi');
+const nav = document.querySelector('.navbar')
+const redes = document.querySelector('.redes')
+foto.style.visibility = 'hidden'
 setTimeout(() => {
-  const nav = document.querySelector('.navbar')
+  foto.style.visibility = 'visible'
   nav.classList.add('visible')
-},3000)
+  foto.style.display = 'block'
+  redes.style.display = 'block'
+},2000) 
+
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 250) {
+    foto.style.visibility = 'hidden';
+    datos.style.marginRight = '400px';
+    datos.style.opacity = '50%';
+    datos.style.transition = 'margin-right 0.3s ease-in-out';
+  } else {
+    foto.style.visibility = 'visible';
+    datos.style.marginRight = '0';
+    datos.style.opacity = '1'
+    datos.style.transition = 'margin-right 0.3s ease';
+  }
+});
 
 
 //modo dark/ligth
@@ -23,12 +44,8 @@ const switchElement = document.getElementById("switch");
     document.body.classList.add('dark-theme');
     dark.style.display = 'none';
     light.style.display = 'block';
-    fotoDark.style.display = 'block'
-    fotoLight.style.display = 'none'
 } else {
     document.body.classList.remove('dark-theme');
-    dark.style.display = 'block';
-    light.style.display = 'none';
 }
   
   switchElement.addEventListener("click", () => {
@@ -64,7 +81,7 @@ const switchElement = document.getElementById("switch");
   }
   
   function escribirNombreYDescripcion() {
-      const delay = 150;
+      const delay = 70;
       const nombreTiempoTotal = texto.length * delay;
   
       escribirTexto(miNombre, texto, delay);
@@ -124,23 +141,7 @@ document.querySelectorAll('.cont-proyectos').forEach(item => {
 });
 
  
-const foto = document.querySelector('.foto-home');
-const datos = document.querySelector('.datos-home');
-const sobreMi = document.querySelector('.sobreMi');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 250) {
-    foto.style.visibility = 'hidden';
-    datos.style.marginRight = '400px';
-    datos.style.opacity = '50%';
-    datos.style.transition = 'margin-right 0.3s ease';
-  } else {
-    foto.style.visibility = 'visible';
-    datos.style.marginRight = '0';
-    datos.style.opacity = '1'
-    datos.style.transition = 'margin-right 0.3s ease';
-  }
-});
 
 // Agrandar contenedor sobreMi
 window.addEventListener('scroll', () => {
